@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QwertyChatV4</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/animista.css">
+</head>
+<body class="dark">
+<div class="topbar">
+  <h1><img src="img/favicon.png" alt="Logo" width="35" height="35">QwertyChat</h1>
+  <input autocomplete="off" id="roomInput" type="text" placeholder="Room Name">
+</div>
+  <div class="popup" id="loginPopup">
+  <h1>Login</h1>
+  <input autocomplete="off" id="usernameInput" type="text" placeholder="Username...">
+  <button onclick="login();" class="join-button">Join</button>
+</div>
+<div class="messagesFade"></div>
+<div class="messagesContainer" id="messages"></div>
+<div id="attachments"></div>
+<div id="moreMenu">
+  <button class="moreMenuOpt" onclick="attachImage();">Add Image</button>
+  <button class="moreMenuOpt" onclick="attachGame('tictactoe');">Add Tic Tac Toe</button>
+
+
+</div>
+<div class="messageBarContainer">
+  <button id="moreButton" onclick="moreMenu();">:o</button>
+  <input autocomplete="off" id="messageInput" type="text" placeholder="Speak Your Mind Here">
+  <button id="sendButton" onclick="sendMessage();">:)</button>
+
+</div>
+</body>
+<script src="bugcatch.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</html>
+
